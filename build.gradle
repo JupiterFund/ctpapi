@@ -1,0 +1,25 @@
+plugins {
+  id 'java'
+  id 'maven'
+  id 'com.github.johnrengelman.shadow' version '5.1.0'
+}
+
+group = 'com.github.JupiterFund'
+version '6.3.13'
+
+dependencies {
+  // 行情接口
+  implementation files('lib/thostmduserapi_6.3.13_20181119.jar')
+  // 交易接口
+  implementation files('lib/thosttraderapi_6.3.13_20181119.jar')
+}
+
+shadowJar {
+  exclude 'META-INF/maven/'
+  version = 'master-SNAPSHOT'
+  archiveName = "$baseName-$version.$extension"
+}
+
+artifacts {
+  archives shadowJar
+}
