@@ -14,7 +14,7 @@ CTP API是用swig方法在官方C++ API上编译得到。
 
 ```gradle
 dependencies {
-  implementation 'com.github.JupiterFund:ctpapi:{{Release}}'
+  implementation 'com.github.JupiterFund:ctpapi:{{Release}}:all'
 }
 ```
 
@@ -23,5 +23,6 @@ dependencies {
     <groupId>com.github.JupiterFund</groupId>
     <artifactId>ctpapi</artifactId>
     <version>{{Release}}</version>
+    <classifier>all</classifier>
 </dependency>
 ```
